@@ -1,0 +1,74 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #3498db;
+  color: white;
+}
+
+.books-section {
+  padding: 20px;
+}
+
+#searchBox {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.book {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px gray;
+}
+
+button {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #2ecc71;
+}
+
+.dashboard {
+  padding: 20px;
+  background: #ecf0f1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #2c3e50;
+  color: white;
+}
