@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>University Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>University Library</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#books">Books</a>
+    <a href="#dashboard">Dashboard</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Welcome to Digital Library</h2>
+  <p>Search, Issue and Manage Books Easily</p>
+</section>
+
+<section id="books" class="books-section">
+  <h2>Search Books</h2>
+  <input type="text" id="searchBox" placeholder="Search books..." onkeyup="searchBooks()">
+  
+  <div id="bookList" class="book-list"></div>
+</section>
+
+<section id="dashboard" class="dashboard">
+  <h2>Your Issued Books</h2>
+  <ul id="issuedList"></ul>
+</section>
+
+<footer>
+  <p>© 2026 University Library System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
