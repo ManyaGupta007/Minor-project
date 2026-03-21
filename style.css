@@ -1,123 +1,200 @@
+/* ===== GLOBAL ===== */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #f1f5f9; /* light clean background */
+  color: #1e293b;
 }
 
-/* Header */
+/* ===== HEADER ===== */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: rgba(0,0,0,0.3);
-  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 18px 40px;
+  background: #020617; /* deep dark */
+  color: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 nav a {
-  color: white;
-  margin: 0 10px;
+  color: #94a3b8;
+  margin: 0 12px;
   text-decoration: none;
-  transition: 0.3s;
+  font-weight: 500;
+  transition: 0.2s;
 }
 
 nav a:hover {
-  color: #00ffd5;
+  color: #38bdf8;
 }
 
-/* Hero */
+/* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
+  background: linear-gradient(to right, #1e293b, #334155);
+  color: white;
 }
 
 .hero h2 {
   font-size: 40px;
+  margin-bottom: 10px;
 }
 
-/* Books Section */
+.hero p {
+  color: #cbd5e1;
+  font-size: 15px;
+}
+
+/* ===== BOOK SECTION ===== */
 .books-section {
-  padding: 20px 40px;
+  padding: 40px;
 }
 
+/* ===== SEARCH ===== */
 #searchBox {
   width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  margin-bottom: 20px;
-  outline: none;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 30px;
+  font-size: 15px;
+  background: white;
+  transition: 0.2s;
 }
 
-/* Book Cards */
+#searchBox:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.2);
+}
+
+/* ===== BOOK GRID ===== */
 .book-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
 }
 
+/* ===== BOOK CARD ===== */
 .book {
-  background: rgba(255,255,255,0.1);
-  border-radius: 15px;
-  padding: 15px;
-  transition: 0.3s;
-  backdrop-filter: blur(8px);
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  position: relative;
 }
 
 .book:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px cyan;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
 }
 
-button {
-  background: #00c9a7;
-  border: none;
-  padding: 8px 12px;
-  margin-top: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
+.book h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
 }
 
-button:hover {
-  background: #7ea29c;
+.book p {
+  font-size: 14px;
+  color: #64748b;
 }
 
-/* Status */
+/* ===== STATUS ===== */
 .status {
-  font-size: 12px;
-  margin-top: 5px;
+  font-size: 13px;
+  margin-top: 6px;
+  font-weight: 600;
 }
 
 .available {
-  color: #12cf61;
+  color: #16a34a;
 }
 
 .issued {
-  color: #000000;
+  color: #dc2626;
 }
 
-/* Dashboard */
+/* ===== BUTTON ===== */
+button {
+  background: #2563eb;
+  border: none;
+  padding: 10px 14px;
+  margin-top: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* ===== DASHBOARD SECTION ===== */
 .dashboard {
-  padding: 20px 20px;
-  background: rgba(33, 73, 206, 0.3);
-  margin-top: 20px;
+  padding: 30px 40px;
+  margin: 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
 }
 
-/* Footer */
+/* ===== DASHBOARD CARDS (OPTIONAL ADD) ===== */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.dashboard-card p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  background: #020617;
+  color: #94a3b8;
+  margin-top: 40px;
 }
 
-/* Toast Notification */
+/* ===== TOAST ===== */
 .toast {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: black;
-  padding: 10px 20px;
+  background: #020617;
+  color: white;
+  padding: 12px 20px;
   border-radius: 10px;
   display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
