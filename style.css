@@ -80,7 +80,7 @@ button {
 }
 
 button:hover {
-  background: #00ffd5;
+  background: #7ea29c;
 }
 
 /* Status */
@@ -90,17 +90,17 @@ button:hover {
 }
 
 .available {
-  color: #2ecc71;
+  color: #12cf61;
 }
 
 .issued {
-  color: #e74c3c;
+  color: #000000;
 }
 
 /* Dashboard */
 .dashboard {
-  padding: 20px 40px;
-  background: rgba(0,0,0,0.3);
+  padding: 20px 20px;
+  background: rgba(33, 73, 206, 0.3);
   margin-top: 20px;
 }
 
@@ -108,7 +108,7 @@ button:hover {
 footer {
   text-align: center;
   padding: 10px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Toast Notification */
