@@ -1,74 +1,123 @@
 body {
-  font-family: Arial;
   margin: 0;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
 }
 
+/* Header */
 header {
-  background: #2c3e50;
-  color: white;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #00ffd5;
+}
+
+/* Hero */
 .hero {
   text-align: center;
-  padding: 50px;
-  background: #3498db;
-  color: white;
+  padding: 60px 20px;
 }
 
+.hero h2 {
+  font-size: 40px;
+}
+
+/* Books Section */
 .books-section {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 #searchBox {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
   margin-bottom: 20px;
+  outline: none;
 }
 
+/* Book Cards */
 .book-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .book {
-  background: white;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
   padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px gray;
+  transition: 0.3s;
+  backdrop-filter: blur(8px);
+}
+
+.book:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px cyan;
 }
 
 button {
-  background: #27ae60;
-  color: white;
+  background: #00c9a7;
   border: none;
-  padding: 8px;
-  cursor: pointer;
+  padding: 8px 12px;
   margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
 }
 
 button:hover {
-  background: #2ecc71;
+  background: #00ffd5;
 }
 
+/* Status */
+.status {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.available {
+  color: #2ecc71;
+}
+
+.issued {
+  color: #e74c3c;
+}
+
+/* Dashboard */
 .dashboard {
-  padding: 20px;
-  background: #ecf0f1;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.3);
+  margin-top: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
-  background: #2c3e50;
-  color: white;
+  background: rgba(0,0,0,0.4);
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: none;
 }
