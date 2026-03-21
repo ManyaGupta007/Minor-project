@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: white;
+  color: rgb(245, 237, 237);
 }
 
 /* Header */
@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 15px 30px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
 
@@ -43,7 +43,7 @@ nav a:hover {
 #searchBox {
   width: 100%;
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 12px;
   border: none;
   margin-bottom: 20px;
   outline: none;
@@ -99,7 +99,7 @@ button:hover {
 
 /* Dashboard */
 .dashboard {
-  padding: 20px 20px;
+  padding: 19px 19px;
   background: rgba(33, 73, 206, 0.3);
   margin-top: 20px;
 }
