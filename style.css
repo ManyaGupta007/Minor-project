@@ -40,7 +40,7 @@ nav a:hover {
   text-align: center;
   padding: 70px 20px;
   background: linear-gradient(to right, #1e293b, #334155);
-  color: white;
+  color: rgb(241, 232, 232);
 }
 
 .hero h2 {
@@ -62,9 +62,9 @@ nav a:hover {
 #searchBox {
   width: 100%;
   padding: 14px;
-  border-radius: 12px;
+  border-radius: 13px;
   border: 1px solid #e2e8f0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   font-size: 15px;
   background: white;
   transition: 0.2s;
@@ -96,7 +96,7 @@ nav a:hover {
 
 .book:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
 .book h3 {
@@ -180,7 +180,8 @@ button:hover {
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 15px;
+  border-radius: 5px;
+  padding: 16px;
   background: #020617;
   color: #94a3b8;
   margin-top: 40px;
@@ -188,7 +189,7 @@ footer {
 
 /* ===== TOAST ===== */
 .toast {
-  position: fixed;
+  position: fixed ;
   bottom: 20px;
   right: 20px;
   background: #020617;
