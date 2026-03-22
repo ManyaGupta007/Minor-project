@@ -2,40 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>University Library</title>
+  <title>Smart Library</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>📚Your Library</h1>
+  <h1>📚 Smart Library</h1>
   <nav>
     <a href="#">Home</a>
     <a href="#books">Books</a>
     <a href="#dashboard">Dashboard</a>
+    <button onclick="toggleTheme()">🌙</button>
   </nav>
 </header>
 
 <section class="hero">
   <h2>Digital Library System</h2>
-  <p>Search, Issue & Manage the Books Easily</p>
+  <p>Search, Issue & Manage Books Easily</p>
 </section>
 
-<section id="books" class="books-section">
+<section class="books-section" id="books">
   <h2>Search Books</h2>
-  <input type="text" id="searchBox" placeholder="Search books.." onkeyup="searchBooks()">
-  
+
+  <input type="text" id="studentName" placeholder="Enter Student Name">
+  <input type="text" id="searchBox" placeholder="Search books..." onkeyup="searchBooks()">
+
   <div id="bookList" class="book-list"></div>
 </section>
 
-<section id="dashboard" class="dashboard">
-  <h2>Issued Books</h2>
+<section class="dashboard" id="dashboard">
+  <h2>Dashboard</h2>
+
+  <div class="dashboard-cards">
+    <div class="dashboard-card">
+      <h3 id="totalBooks">0</h3>
+      <p>Total Books</p>
+    </div>
+
+    <div class="dashboard-card">
+      <h3 id="issuedCount">0</h3>
+      <p>Issued Books</p>
+    </div>
+  </div>
+
+  <h3>Issued Books</h3>
   <ul id="issuedList"></ul>
 </section>
 
 <footer>
-  <p>© 2026 Library Management System</p>
+  <p>© 2026 Smart Library</p>
 </footer>
 
 <div class="toast" id="toast"></div>
