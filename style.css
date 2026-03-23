@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
-  background: #707798; /* deep dark */
+  background: #020617; /* deep dark */
   color: white;
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -21,12 +21,11 @@ header {
 header h1 {
   font-size: 20px;
   font-weight: 600;
-  text-decoration: solid 2px white;
 }
 
 nav a {
   color: #94a3b8;
-  margin: 12px;
+  margin: 0 12px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.2s;
@@ -39,7 +38,7 @@ nav a:hover {
 /* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 70px 21px;
+  padding: 70px 20px;
   background: linear-gradient(to right, #1e293b, #334155);
   color: rgb(241, 232, 232);
 }
@@ -47,13 +46,11 @@ nav a:hover {
 .hero h2 {
   font-size: 40px;
   margin-bottom: 10px;
-  margin-top: 0px;
 }
 
 .hero p {
   color: #cbd5e1;
   font-size: 15px;
-  margin: 0px;
 }
 
 /* ===== BOOK SECTION ===== */
@@ -88,7 +85,7 @@ nav a:hover {
 
 /* ===== BOOK CARD ===== */
 .book {
-  background: rgb(230, 225, 225);
+  background: white;
   border-radius: 16px;
   padding: 20px;
   transition: 0.25s ease;
