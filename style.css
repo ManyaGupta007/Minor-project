@@ -29,8 +29,9 @@ nav a {
   transition: 0.2s;
 }
 
-nav a:hover {
-  color: #38bdf8;
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #06b6d4;
 }
 
 /* ===== HERO ===== */
