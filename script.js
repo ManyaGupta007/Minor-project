@@ -1,154 +1,176 @@
 // ===== BOOK DATA =====
 const books = [
-  { id: 1, title: "Data Structures", author: "Mark Allen", available: true, img: "https://picsum.photos/400/300?random=1" },
-  { id: 2, title: "Operating System", author: "Galvin", available: true, img: "https://picsum.photos/400/300?random=2" },
-  { id: 3, title: "Database Management", author: "Korth", available: true, img: "https://picsum.photos/400/300?random=3" },
-  { id: 4, title: "Computer Networks", author: "Tanenbaum", available: true, img: "https://picsum.photos/400/300?random=4" },
-  { id: 5, title: "Artificial Intelligence", author: "Russell", available: true, img: "https://picsum.photos/400/300?random=5" }
+  { id: 1, title: "Data Structures",        author: "Mark Allen Weiss", available: true },
+  { id: 2, title: "Operating Systems",      author: "Abraham Silberschatz (Galvin)", available: true },
+  { id: 3, title: "Database Management",    author: "Henry F. Korth",   available: true },
+  { id: 4, title: "Computer Networks",      author: "Andrew S. Tanenbaum", available: true },
+  { id: 5, title: "Artificial Intelligence",author: "Stuart Russell",   available: true }
 ];
 
 let issuedBooks = [];
 
-// ===== LOAD DATA =====
+// ===== PERSISTENCE =====
 function loadData() {
-  const data = localStorage.getItem("issuedBooks");
-  if (data) issuedBooks = JSON.parse(data);
-
-  // restore availability based on issued books
-  issuedBooks.forEach(issued => {
-    const book = books.find(b => b.id === issued.id);
-    if (book) book.available = false;
-  });
+  try {
+    const saved = localStorage.getItem("sl_issued");
+    if (saved) {
+      issuedBooks = JSON.parse(saved);
+      issuedBooks.forEach(rec => {
+        const book = books.find(b => b.id === rec.id);
+        if (book) book.available = false;
+      });
+    }
+  } catch (e) {
+    issuedBooks = [];
+  }
 }
 
-// ===== SAVE DATA =====
 function saveData() {
-  localStorage.setItem("issuedBooks", JSON.stringify(issuedBooks));
+  try { localStorage.setItem("sl_issued", JSON.stringify(issuedBooks)); } catch (e) {}
 }
 
 // ===== TOAST =====
+let toastTimer;
 function showToast(msg) {
   const t = document.getElementById("toast");
-  t.innerText = msg;
+  t.textContent = msg;
   t.style.display = "block";
-
-  setTimeout(() => {
-    t.style.display = "none";
-  }, 2000);
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { t.style.display = "none"; }, 2800);
 }
 
-// ===== DISPLAY BOOKS =====
-function displayBooks(list) {
-  const bookList = document.getElementById("bookList");
-  bookList.innerHTML = "";
-
-  list.forEach(book => {
-    const div = document.createElement("div");
-    div.className = "book";
-
-    div.style.backgroundImage = `url(${book.img})`;
-
-    div.innerHTML = `
-      <h3>${book.title}</h3>
-      <p>${book.author}</p>
-      <p class="${book.available ? "available" : "issued"}">
-        ${book.available ? "Available" : "Issued"}
-      </p>
-      <button onclick="issueBook(${book.id})" ${!book.available ? "disabled" : ""}>
-        ${book.available ? "Issue" : "Issued"}
-      </button>
-    `;
-
-    bookList.appendChild(div);
-  });
+// ===== RENDER CATALOGUE =====
+function renderBooks(list) {
+  const tbody = document.getElementById("bookList");
+  tbody.innerHTML = list.map((book, idx) => `
+    <tr>
+      <td style="color:var(--text-muted)">${book.id}</td>
+      <td style="font-weight:500">${book.title}</td>
+      <td style="color:var(--text-secondary)">${book.author}</td>
+      <td>
+        <span class="status-pill ${book.available ? 'available' : 'issued'}">
+          ${book.available ? 'Available' : 'Issued'}
+        </span>
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          onclick="issueBook(${book.id})"
+          ${!book.available ? 'disabled' : ''}
+        >Issue</button>
+      </td>
+    </tr>
+  `).join('');
 }
 
 // ===== SEARCH =====
 function searchBooks() {
-  const search = document.getElementById("searchBox").value.toLowerCase();
-
-  const filtered = books.filter(b =>
-    b.title.toLowerCase().includes(search) ||
-    b.author.toLowerCase().includes(search)
-  );
-
-  displayBooks(filtered);
+  const q = document.getElementById("searchBox").value.toLowerCase().trim();
+  const filtered = q
+    ? books.filter(b => b.title.toLowerCase().includes(q) || b.author.toLowerCase().includes(q))
+    : books;
+  renderBooks(filtered);
 }
 
 // ===== ISSUE BOOK =====
 function issueBook(id) {
   const name = document.getElementById("studentName").value.trim();
-
   if (!name) {
-    showToast("Enter student name ❗");
+    showToast("Please enter the student's name before issuing.");
+    document.getElementById("studentName").focus();
     return;
   }
 
   const book = books.find(b => b.id === id);
+  if (!book || !book.available) return;
 
-  if (book && book.available) {
-    book.available = false;
+  book.available = false;
+  issuedBooks.push({
+    id: book.id,
+    title: book.title,
+    student: name,
+    date: new Date().toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })
+  });
 
-    issuedBooks.push({
-      id: book.id,
-      title: book.title,
-      student: name,
-      date: new Date().toLocaleDateString()
-    });
-
-    saveData();
-    updateDashboard();
-    displayBooks(books);
-
-    showToast("Book Issued ✅");
-  }
+  saveData();
+  updateStats();
+  renderBooks(books);
+  renderIssued();
+  showToast(`"${book.title}" issued to ${name}`);
 }
 
 // ===== RETURN BOOK =====
 function returnBook(index) {
-  const issued = issuedBooks[index];
+  const rec = issuedBooks[index];
+  const book = books.find(b => b.id === rec.id);
+  if (book) book.available = true;
 
-  // find original book and update it
-  const originalBook = books.find(b => b.id === issued.id);
-  if (originalBook) originalBook.available = true;
-
+  const title = rec.title;
   issuedBooks.splice(index, 1);
 
   saveData();
-  updateDashboard();
-  displayBooks(books);
-
-  showToast("Book Returned 🔄");
+  updateStats();
+  renderBooks(books);
+  renderIssued();
+  showToast(`"${title}" has been returned.`);
 }
 
-// ===== DASHBOARD =====
-function updateDashboard() {
-  const list = document.getElementById("issuedList");
-  list.innerHTML = "";
+// ===== RENDER ISSUED TABLE =====
+function renderIssued() {
+  const tbody = document.getElementById("issuedList");
+  const empty = document.getElementById("emptyState");
+  const badge = document.getElementById("issuedBadge");
 
-  issuedBooks.forEach((book, index) => {
-    const li = document.createElement("li");
+  badge.textContent = `${issuedBooks.length} record${issuedBooks.length !== 1 ? 's' : ''}`;
 
-    li.innerHTML = `
-      <strong>${book.title}</strong><br>
-      👤 ${book.student}<br>
-      📅 ${book.date}<br>
-      <button onclick="returnBook(${index})">Return</button>
-    `;
+  if (!issuedBooks.length) {
+    tbody.innerHTML = '';
+    empty.classList.add("visible");
+    return;
+  }
 
-    list.appendChild(li);
-  });
-
-  document.getElementById("totalBooks").innerText = books.length;
-  document.getElementById("issuedCount").innerText = issuedBooks.length;
+  empty.classList.remove("visible");
+  tbody.innerHTML = issuedBooks.map((rec, i) => `
+    <tr>
+      <td style="color:var(--text-muted)">${i + 1}</td>
+      <td style="font-weight:500">${rec.title}</td>
+      <td style="color:var(--text-secondary)">${rec.student}</td>
+      <td style="color:var(--text-muted)">${rec.date}</td>
+      <td>
+        <button class="btn btn-outline" onclick="returnBook(${i})">Return</button>
+      </td>
+    </tr>
+  `).join('');
 }
 
-// ===== THEME TOGGLE =====
+// ===== STATS =====
+function updateStats() {
+  const issued = issuedBooks.length;
+  const available = books.filter(b => b.available).length;
+  document.getElementById("totalBooks").textContent    = books.length;
+  document.getElementById("availableCount").textContent = available;
+  document.getElementById("issuedCount").textContent   = issued;
+}
+
+// ===== THEME =====
 function toggleTheme() {
-  document.body.classList.toggle("dark");
+  const isDark = document.body.classList.toggle("dark");
+  document.getElementById("icon-sun").style.display  = isDark ? "none"  : "block";
+  document.getElementById("icon-moon").style.display = isDark ? "block" : "none";
+  localStorage.setItem("sl_theme", isDark ? "dark" : "light");
+}
+
+function loadTheme() {
+  if (localStorage.getItem("sl_theme") === "dark") {
+    document.body.classList.add("dark");
+    document.getElementById("icon-sun").style.display  = "none";
+    document.getElementById("icon-moon").style.display = "block";
+  }
 }
 
 // ===== INIT =====
+loadTheme();
 loadData();
-displayBooks(books);
-updateDashboard();
+updateStats();
+renderBooks(books);
+renderIssued();
