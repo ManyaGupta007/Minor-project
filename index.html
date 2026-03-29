@@ -2,61 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Smart Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Library Management System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-  <h1>📚 Smart Library</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#books">Books</a>
-    <a href="#dashboard">Dashboard</a>
-    <button onclick="toggleTheme()">🌙</button>
-  </nav>
-</header>
-
-<section class="hero">
-  <h2>Digital Library System</h2>
-  <p>Search, Issue & Manage Books Easily</p>
-</section>
-
-<section class="books-section" id="books">
-  <h2>Search Books</h2>
-
-  <input type="text" id="studentName" placeholder="Enter Student Name">
-  <input type="text" id="searchBox" placeholder="Search books..." onkeyup="searchBooks()">
-
-  <div id="bookList" class="book-list"></div>
-</section>
-
-<section class="dashboard" id="dashboard">
-  <h2>Dashboard</h2>
-
-  <div class="dashboard-cards">
-    <div class="dashboard-card">
-      <h3 id="totalBooks">0</h3>
-      <p>📚Total Books</p>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__brand">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Smart Library</span>
+      </div>
+      <nav class="header__nav">
+        <a href="#books">Catalogue</a>
+        <a href="#dashboard">Dashboard</a>
+        <button class="btn-theme" onclick="toggleTheme()" title="Toggle theme">
+          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </nav>
     </div>
+  </header>
 
-    <div class="dashboard-card">
-      <h3 id="issuedCount">0</h3>
-      <p>📖Issued Books</p>
+  <!-- PAGE TITLE BAR -->
+  <div class="page-title-bar">
+    <div class="container">
+      <h1 class="page-title">Library Management System</h1>
+      <p class="page-subtitle">Issue and manage books across your institution</p>
     </div>
   </div>
 
-  <h3>✅Issued Books</h3>
-  <ul id="issuedList"></ul>
-</section>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stat-item">
+        <span class="stat-value" id="totalBooks">0</span>
+        <span class="stat-label">Total Books</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value" id="availableCount">0</span>
+        <span class="stat-label">Available</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value" id="issuedCount">0</span>
+        <span class="stat-label">Issued</span>
+      </div>
+    </div>
+  </div>
 
-<footer>
-  <p>© 2026 Smart Library</p>
-</footer>
+  <main class="container main">
 
-<div class="toast" id="toast"></div>
+    <!-- BOOK CATALOGUE -->
+    <section class="card" id="books">
+      <div class="card__header">
+        <div>
+          <h2 class="card__title">Book Catalogue</h2>
+          <p class="card__desc">Enter a student name, then click Issue on any available book.</p>
+        </div>
+      </div>
+      <div class="card__body">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="studentName">Student Name</label>
+            <input class="form-input" type="text" id="studentName" placeholder="e.g. Rahul Sharma">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="searchBox">Search</label>
+            <div class="input-icon-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input class="form-input form-input--icon" type="text" id="searchBox" placeholder="Title or author…" oninput="searchBooks()">
+            </div>
+          </div>
+        </div>
 
-<script src="script.js"></script>
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:48px">#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th style="width:110px">Status</th>
+                <th style="width:110px">Action</th>
+              </tr>
+            </thead>
+            <tbody id="bookList"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ISSUED BOOKS -->
+    <section class="card" id="dashboard">
+      <div class="card__header">
+        <div>
+          <h2 class="card__title">Issued Books</h2>
+          <p class="card__desc">Currently checked-out books and borrower details.</p>
+        </div>
+        <span class="badge" id="issuedBadge">0 records</span>
+      </div>
+      <div class="card__body">
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th style="width:48px">#</th>
+                <th>Book Title</th>
+                <th>Student</th>
+                <th style="width:130px">Issue Date</th>
+                <th style="width:110px">Action</th>
+              </tr>
+            </thead>
+            <tbody id="issuedList"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="emptyState">No books currently issued.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Smart Library Management System</span>
+      <span>All rights reserved</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
