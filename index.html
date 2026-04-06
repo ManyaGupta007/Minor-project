@@ -3,139 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Library Management System</title>
+  <title>Smart Library — Catalogue</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header__inner">
-      <div class="header__brand">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        <span>Smart Library</span>
-      </div>
-      <nav class="header__nav">
-        <a href="#books">Catalogue</a>
-        <a href="#dashboard">Dashboard</a>
-        <button class="btn-theme" onclick="toggleTheme()" title="Toggle theme">
-          <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-      </nav>
+<!-- SIDEBAR OVERLAY (mobile) -->
+<div class="sidebar-overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__logo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span class="sidebar__logo-text">Smart Library</span>
+  </div>
+  <button class="sidebar__toggle" onclick="toggleSidebar()" title="Toggle sidebar">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+
+  <nav class="sidebar__nav">
+    <div class="sidebar__section-label">Main</div>
+
+    <a class="nav-item active" href="index.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span class="nav-item__label">Home</span>
+    </a>
+
+    <a class="nav-item" href="issued.html">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span class="nav-item__label">Issued Books</span>
+      <span class="nav-badge" id="sideIssuedCount">0</span>
+    </a>
+
+    <div class="sidebar__section-label">Catalogue</div>
+
+    <a class="nav-item cat-nav" data-cat="" href="#" onclick="filterByCategory(''); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span class="nav-item__label">All Books</span>
+      <span class="nav-badge cat-badge" data-cat="">200</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Computer Science" href="#" onclick="filterByCategory('Computer Science'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <span class="nav-item__label">Computer Science</span>
+      <span class="nav-badge cat-badge" data-cat="Computer Science">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Mathematics" href="#" onclick="filterByCategory('Mathematics'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span class="nav-item__label">Mathematics</span>
+      <span class="nav-badge cat-badge" data-cat="Mathematics">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Programming" href="#" onclick="filterByCategory('Programming'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span class="nav-item__label">Programming</span>
+      <span class="nav-badge cat-badge" data-cat="Programming">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Fiction" href="#" onclick="filterByCategory('Fiction'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      <span class="nav-item__label">Fiction</span>
+      <span class="nav-badge cat-badge" data-cat="Fiction">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Science" href="#" onclick="filterByCategory('Science'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+      <span class="nav-item__label">Science</span>
+      <span class="nav-badge cat-badge" data-cat="Science">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Self Help" href="#" onclick="filterByCategory('Self Help'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span class="nav-item__label">Self Help</span>
+      <span class="nav-badge cat-badge" data-cat="Self Help">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Physics" href="#" onclick="filterByCategory('Physics'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      <span class="nav-item__label">Physics</span>
+      <span class="nav-badge cat-badge" data-cat="Physics">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Biography" href="#" onclick="filterByCategory('Biography'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span class="nav-item__label">Biography</span>
+      <span class="nav-badge cat-badge" data-cat="Biography">…</span>
+    </a>
+
+    <a class="nav-item cat-nav" data-cat="Management" href="#" onclick="filterByCategory('Management'); return false;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span class="nav-item__label">Management</span>
+      <span class="nav-badge cat-badge" data-cat="Management">…</span>
+    </a>
+
+    <div class="sidebar__section-label">Account</div>
+
+    <a class="nav-item" href="#" onclick="toggleTheme(); return false;">
+      <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span class="nav-item__label">Toggle Theme</span>
+    </a>
+  </nav>
+
+  <div class="sidebar__footer">
+    <div class="nav-item" style="cursor:default;opacity:.5">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span class="nav-item__label" style="font-size:11px">200 books · 25 categories</span>
+    </div>
+  </div>
+</aside>
+
+<!-- APP SHELL -->
+<div class="app-shell" id="appShell">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <button class="btn-theme" onclick="openSidebar()" id="mobileMenuBtn" style="display:none">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <span class="topbar__title">Book Catalogue</span>
+    <span class="topbar__sub">Browse and issue books</span>
+    <div class="topbar__right">
+      <a href="issued.html" class="btn btn-outline" style="text-decoration:none">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Issued Records
+      </a>
     </div>
   </header>
 
-  <!-- PAGE TITLE BAR -->
-  <div class="page-title-bar">
-    <div class="container">
-      <h1 class="page-title">Library Management System</h1>
-      <p class="page-subtitle">Issue and manage books across your institution</p>
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-card stat-card--blue">
+      <div class="stat-card__val" id="totalBooks">—</div>
+      <div class="stat-card__lbl">Total Books</div>
+      <div class="stat-card__sub">In library</div>
+    </div>
+    <div class="stat-card stat-card--green">
+      <div class="stat-card__val" id="availableCount">—</div>
+      <div class="stat-card__lbl">Available</div>
+      <div class="stat-card__sub">Ready to issue</div>
+    </div>
+    <div class="stat-card stat-card--red">
+      <div class="stat-card__val" id="issuedCount">—</div>
+      <div class="stat-card__lbl">Issued</div>
+      <div class="stat-card__sub"><a href="issued.html" style="color:var(--red);text-decoration:none">View records →</a></div>
     </div>
   </div>
 
-  <!-- STATS BAR -->
-  <div class="stats-bar">
-    <div class="container stats-bar__inner">
-      <div class="stat-item">
-        <span class="stat-value" id="totalBooks">0</span>
-        <span class="stat-label">Total Books</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-value" id="availableCount">0</span>
-        <span class="stat-label">Available</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-value" id="issuedCount">0</span>
-        <span class="stat-label">Issued</span>
-      </div>
-    </div>
-  </div>
-
-  <main class="container main">
-
-    <!-- BOOK CATALOGUE -->
-    <section class="card" id="books">
+  <!-- CONTENT -->
+  <div class="page-content">
+    <div class="card">
       <div class="card__header">
         <div>
-          <h2 class="card__title">Book Catalogue</h2>
-          <p class="card__desc">Enter a student name, then click Issue on any available book.</p>
+          <div class="card__title">Book Catalogue</div>
+          <div class="card__desc">Enter student name → search or pick a category → click Issue</div>
         </div>
       </div>
       <div class="card__body">
+
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="studentName">Student Name</label>
+            <label class="form-label" for="studentName">Student Name *</label>
             <input class="form-input" type="text" id="studentName" placeholder="e.g. Rahul Sharma">
           </div>
           <div class="form-group">
-            <label class="form-label" for="searchBox">Search</label>
+            <label class="form-label" for="searchBox">Search (200+ books)</label>
             <div class="input-icon-wrap">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-              <input class="form-input form-input--icon" type="text" id="searchBox" placeholder="Title or author…" oninput="searchBooks()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <input class="form-input form-input--icon" type="text" id="searchBox"
+                placeholder="Title, author, subject…" oninput="searchBooks()">
             </div>
+          </div>
+          <div class="form-group" style="max-width:190px">
+            <label class="form-label" for="categoryFilter">Category</label>
+            <select class="form-input" id="categoryFilter" onchange="searchBooks()">
+              <option value="">All categories</option>
+            </select>
           </div>
         </div>
 
+        <div id="tableHint" class="table-hint hint--featured">
+          <span>⭐</span>
+          Showing <strong>10 popular books</strong>. Search above to browse all <strong>200 books</strong>.
+        </div>
+
         <div class="table-wrap">
           <table class="table">
             <thead>
               <tr>
-                <th style="width:48px">#</th>
+                <th style="width:40px">#</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th style="width:110px">Status</th>
-                <th style="width:110px">Action</th>
+                <th style="width:130px">Category</th>
+                <th style="width:100px">Status</th>
+                <th style="width:90px">Action</th>
               </tr>
             </thead>
-            <tbody id="bookList"></tbody>
+            <tbody id="bookList">
+              <tr><td colspan="6" class="table-msg"><span class="spinner"></span>Loading…</td></tr>
+            </tbody>
           </table>
         </div>
-      </div>
-    </section>
 
-    <!-- ISSUED BOOKS -->
-    <section class="card" id="dashboard">
-      <div class="card__header">
-        <div>
-          <h2 class="card__title">Issued Books</h2>
-          <p class="card__desc">Currently checked-out books and borrower details.</p>
-        </div>
-        <span class="badge" id="issuedBadge">0 records</span>
       </div>
-      <div class="card__body">
-        <div class="table-wrap">
-          <table class="table">
-            <thead>
-              <tr>
-                <th style="width:48px">#</th>
-                <th>Book Title</th>
-                <th>Student</th>
-                <th style="width:130px">Issue Date</th>
-                <th style="width:110px">Action</th>
-              </tr>
-            </thead>
-            <tbody id="issuedList"></tbody>
-          </table>
-        </div>
-        <p class="empty-state" id="emptyState">No books currently issued.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>© 2026 Smart Library Management System</span>
-      <span>All rights reserved</span>
     </div>
+  </div>
+
+  <footer style="padding:16px 24px;border-top:1px solid var(--border);background:var(--surface);font-size:12px;color:var(--text-muted);display:flex;justify-content:space-between">
+    <span>© 2026 Smart Library Management System</span>
+    <span>200 books · 25 categories</span>
   </footer>
+</div>
 
-  <div class="toast" id="toast"></div>
-
-  <script src="script.js"></script>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
 </body>
 </html>

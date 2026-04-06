@@ -1,0 +1,1616 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Data Structures & Algorithms",
+      "author": "Mark Allen Weiss",
+      "category": "Computer Science",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "title": "Operating Systems",
+      "author": "Abraham Silberschatz",
+      "category": "Computer Science",
+      "featured": true,
+      "available": false
+    },
+    {
+      "id": 3,
+      "title": "Database Management Systems",
+      "author": "Henry F. Korth",
+      "category": "Computer Science",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 4,
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "category": "Computer Science",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 5,
+      "title": "Artificial Intelligence",
+      "author": "Stuart Russell",
+      "category": "Computer Science",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 6,
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "category": "Computer Science",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 7,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Programming",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 8,
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "category": "Programming",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 9,
+      "title": "Design Patterns",
+      "author": "Gang of Four",
+      "category": "Programming",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 10,
+      "title": "Python Crash Course",
+      "author": "Eric Matthes",
+      "category": "Programming",
+      "featured": true,
+      "available": true
+    },
+    {
+      "id": 11,
+      "title": "Computer Organization",
+      "author": "Carl Hamacher",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 12,
+      "title": "Discrete Mathematics",
+      "author": "Kenneth H. Rosen",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 13,
+      "title": "Theory of Computation",
+      "author": "Michael Sipser",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 14,
+      "title": "Software Engineering",
+      "author": "Ian Sommerville",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 15,
+      "title": "Machine Learning",
+      "author": "Tom Mitchell",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 16,
+      "title": "Deep Learning",
+      "author": "Ian Goodfellow",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 17,
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 18,
+      "title": "You Don't Know JS",
+      "author": "Kyle Simpson",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 19,
+      "title": "Cracking the Coding Interview",
+      "author": "Gayle Laakmann McDowell",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 20,
+      "title": "Head First Java",
+      "author": "Kathy Sierra",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 21,
+      "title": "Effective Java",
+      "author": "Joshua Bloch",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 22,
+      "title": "The C Programming Language",
+      "author": "Brian W. Kernighan",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 23,
+      "title": "C++ Primer",
+      "author": "Stanley B. Lippman",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 24,
+      "title": "Computer Graphics",
+      "author": "James D. Foley",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 25,
+      "title": "Compiler Design",
+      "author": "Alfred V. Aho",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 26,
+      "title": "Linear Algebra",
+      "author": "Gilbert Strang",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 27,
+      "title": "Probability & Statistics",
+      "author": "Sheldon Ross",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 28,
+      "title": "Calculus",
+      "author": "James Stewart",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 29,
+      "title": "Digital Electronics",
+      "author": "Morris Mano",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 30,
+      "title": "Microprocessors & Interfacing",
+      "author": "Douglas V. Hall",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 31,
+      "title": "React Up and Running",
+      "author": "Stoyan Stefanov",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 32,
+      "title": "Node.js Design Patterns",
+      "author": "Mario Casciaro",
+      "category": "Programming",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 33,
+      "title": "Learning SQL",
+      "author": "Alan Beaulieu",
+      "category": "Database",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 34,
+      "title": "MongoDB: The Definitive Guide",
+      "author": "Kristina Chodorow",
+      "category": "Database",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 35,
+      "title": "Redis in Action",
+      "author": "Josiah Carlson",
+      "category": "Database",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 36,
+      "title": "Kubernetes in Action",
+      "author": "Marko Luksa",
+      "category": "DevOps",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 37,
+      "title": "Docker Deep Dive",
+      "author": "Nigel Poulton",
+      "category": "DevOps",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 38,
+      "title": "The Linux Command Line",
+      "author": "William Shotts",
+      "category": "Systems",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 39,
+      "title": "Unix Network Programming",
+      "author": "W. Richard Stevens",
+      "category": "Systems",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 40,
+      "title": "Computer Security: Art & Science",
+      "author": "Matt Bishop",
+      "category": "Security",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 41,
+      "title": "Web Application Hacker's Handbook",
+      "author": "Dafydd Stuttard",
+      "category": "Security",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 42,
+      "title": "Hacking: The Art of Exploitation",
+      "author": "Jon Erickson",
+      "category": "Security",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 43,
+      "title": "Natural Language Processing with Python",
+      "author": "Steven Bird",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 44,
+      "title": "Pattern Recognition & Machine Learning",
+      "author": "Christopher Bishop",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 45,
+      "title": "Reinforcement Learning",
+      "author": "Richard Sutton",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 46,
+      "title": "Computer Vision: Algorithms",
+      "author": "Richard Szeliski",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 47,
+      "title": "Speech and Language Processing",
+      "author": "Daniel Jurafsky",
+      "category": "AI & ML",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 48,
+      "title": "Algorithms to Live By",
+      "author": "Brian Christian",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 49,
+      "title": "Code: The Hidden Language",
+      "author": "Charles Petzold",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 50,
+      "title": "Structure & Interpretation of Programs",
+      "author": "Harold Abelson",
+      "category": "Computer Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 51,
+      "title": "Engineering Mathematics",
+      "author": "K.A. Stroud",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 52,
+      "title": "Higher Engineering Mathematics",
+      "author": "B.S. Grewal",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 53,
+      "title": "Advanced Engineering Mathematics",
+      "author": "Erwin Kreyszig",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 54,
+      "title": "Numerical Methods for Engineers",
+      "author": "Steven Chapra",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 55,
+      "title": "Graph Theory",
+      "author": "Frank Harary",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 56,
+      "title": "Real Analysis",
+      "author": "Walter Rudin",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 57,
+      "title": "Abstract Algebra",
+      "author": "David S. Dummit",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 58,
+      "title": "Number Theory",
+      "author": "Ivan Niven",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 59,
+      "title": "Differential Equations",
+      "author": "Dennis G. Zill",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 60,
+      "title": "Complex Analysis",
+      "author": "Lars Ahlfors",
+      "category": "Mathematics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 61,
+      "title": "Engineering Physics",
+      "author": "S.K. Gupta",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 62,
+      "title": "University Physics",
+      "author": "Hugh D. Young",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 63,
+      "title": "Concepts of Physics",
+      "author": "H.C. Verma",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 64,
+      "title": "Classical Mechanics",
+      "author": "Herbert Goldstein",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 65,
+      "title": "Quantum Mechanics",
+      "author": "David Griffiths",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 66,
+      "title": "Introduction to Electrodynamics",
+      "author": "David Griffiths",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 67,
+      "title": "Thermodynamics",
+      "author": "Cengel & Boles",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 68,
+      "title": "Optics",
+      "author": "Eugene Hecht",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 69,
+      "title": "Nuclear Physics",
+      "author": "Roy & Nigam",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 70,
+      "title": "Solid State Physics",
+      "author": "Charles Kittel",
+      "category": "Physics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 71,
+      "title": "Engineering Chemistry",
+      "author": "P.C. Jain",
+      "category": "Chemistry",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 72,
+      "title": "Organic Chemistry",
+      "author": "Paula Y. Bruice",
+      "category": "Chemistry",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 73,
+      "title": "Inorganic Chemistry",
+      "author": "J.D. Lee",
+      "category": "Chemistry",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 74,
+      "title": "Physical Chemistry",
+      "author": "P.W. Atkins",
+      "category": "Chemistry",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 75,
+      "title": "Analytical Chemistry",
+      "author": "Gary D. Christian",
+      "category": "Chemistry",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 76,
+      "title": "Biochemistry",
+      "author": "Jeremy M. Berg",
+      "category": "Biology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 77,
+      "title": "Cell Biology",
+      "author": "Bruce Alberts",
+      "category": "Biology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 78,
+      "title": "Molecular Biology of the Cell",
+      "author": "Bruce Alberts",
+      "category": "Biology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 79,
+      "title": "Genetics",
+      "author": "Peter J. Russell",
+      "category": "Biology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 80,
+      "title": "Microbiology",
+      "author": "Prescott, Harley & Klein",
+      "category": "Biology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 81,
+      "title": "Engineering Mechanics: Statics",
+      "author": "R.C. Hibbeler",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 82,
+      "title": "Engineering Mechanics: Dynamics",
+      "author": "R.C. Hibbeler",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 83,
+      "title": "Strength of Materials",
+      "author": "R.K. Bansal",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 84,
+      "title": "Fluid Mechanics",
+      "author": "Frank M. White",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 85,
+      "title": "Heat Transfer",
+      "author": "J.P. Holman",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 86,
+      "title": "Machine Design",
+      "author": "V.B. Bhandari",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 87,
+      "title": "Theory of Machines",
+      "author": "S.S. Rattan",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 88,
+      "title": "Manufacturing Engineering",
+      "author": "Kalpakjian",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 89,
+      "title": "Automobile Engineering",
+      "author": "R.B. Gupta",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 90,
+      "title": "Refrigeration & Air Conditioning",
+      "author": "Arora & Domkundwar",
+      "category": "Mechanical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 91,
+      "title": "Basic Electrical Engineering",
+      "author": "D.P. Kothari",
+      "category": "Electrical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 92,
+      "title": "Electrical Machines",
+      "author": "A.K. Sawhney",
+      "category": "Electrical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 93,
+      "title": "Power Systems Engineering",
+      "author": "Stevenson",
+      "category": "Electrical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 94,
+      "title": "Control Systems Engineering",
+      "author": "Norman S. Nise",
+      "category": "Electrical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 95,
+      "title": "Signals and Systems",
+      "author": "Alan V. Oppenheim",
+      "category": "Electrical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 96,
+      "title": "Electronic Devices & Circuits",
+      "author": "David A. Bell",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 97,
+      "title": "Analog Electronics",
+      "author": "U.A. Bakshi",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 98,
+      "title": "VLSI Design",
+      "author": "Neil Weste",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 99,
+      "title": "Embedded Systems",
+      "author": "Raj Kamal",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 100,
+      "title": "Communication Systems",
+      "author": "Haykin & Moher",
+      "category": "Electronics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 101,
+      "title": "Principles of Economics",
+      "author": "N. Gregory Mankiw",
+      "category": "Economics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 102,
+      "title": "Macroeconomics",
+      "author": "Dornbusch & Fischer",
+      "category": "Economics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 103,
+      "title": "Microeconomics",
+      "author": "Robert S. Pindyck",
+      "category": "Economics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 104,
+      "title": "International Economics",
+      "author": "Paul R. Krugman",
+      "category": "Economics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 105,
+      "title": "Development Economics",
+      "author": "Debraj Ray",
+      "category": "Economics",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 106,
+      "title": "Financial Accounting",
+      "author": "R.L. Gupta",
+      "category": "Commerce",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 107,
+      "title": "Cost Accounting",
+      "author": "M.N. Arora",
+      "category": "Commerce",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 108,
+      "title": "Corporate Finance",
+      "author": "Brealey, Myers & Allen",
+      "category": "Commerce",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 109,
+      "title": "Business Law",
+      "author": "M.C. Kuchhal",
+      "category": "Commerce",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 110,
+      "title": "Marketing Management",
+      "author": "Philip Kotler",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 111,
+      "title": "Human Resource Management",
+      "author": "Gary Dessler",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 112,
+      "title": "Organizational Behaviour",
+      "author": "Stephen P. Robbins",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 113,
+      "title": "Strategic Management",
+      "author": "Fred R. David",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 114,
+      "title": "Operations Management",
+      "author": "William J. Stevenson",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 115,
+      "title": "Project Management",
+      "author": "Harold Kerzner",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 116,
+      "title": "Business Analytics",
+      "author": "James Evans",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 117,
+      "title": "Entrepreneurship",
+      "author": "Robert D. Hisrich",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 118,
+      "title": "Supply Chain Management",
+      "author": "Sunil Chopra",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 119,
+      "title": "Total Quality Management",
+      "author": "Dale H. Besterfield",
+      "category": "Management",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 120,
+      "title": "Introduction to Psychology",
+      "author": "James W. Kalat",
+      "category": "Psychology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 121,
+      "title": "Social Psychology",
+      "author": "David G. Myers",
+      "category": "Psychology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 122,
+      "title": "Cognitive Psychology",
+      "author": "Robert J. Sternberg",
+      "category": "Psychology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 123,
+      "title": "Abnormal Psychology",
+      "author": "Ronald J. Comer",
+      "category": "Psychology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 124,
+      "title": "Developmental Psychology",
+      "author": "David R. Shaffer",
+      "category": "Psychology",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 125,
+      "title": "Introduction to Sociology",
+      "author": "Anthony Giddens",
+      "category": "Social Sciences",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 126,
+      "title": "Political Science",
+      "author": "Andrew Heywood",
+      "category": "Social Sciences",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 127,
+      "title": "Indian Polity",
+      "author": "M. Laxmikanth",
+      "category": "Social Sciences",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 128,
+      "title": "Modern History of India",
+      "author": "Bipin Chandra",
+      "category": "History",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 129,
+      "title": "Ancient India",
+      "author": "R.S. Sharma",
+      "category": "History",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 130,
+      "title": "Medieval India",
+      "author": "Satish Chandra",
+      "category": "History",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 131,
+      "title": "World History",
+      "author": "Arjun Dev",
+      "category": "History",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 132,
+      "title": "Geography of India",
+      "author": "Majid Husain",
+      "category": "Geography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 133,
+      "title": "Physical Geography",
+      "author": "Savindra Singh",
+      "category": "Geography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 134,
+      "title": "Human Geography",
+      "author": "Majid Husain",
+      "category": "Geography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 135,
+      "title": "Environmental Studies",
+      "author": "R. Rajagopalan",
+      "category": "Environment",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 136,
+      "title": "Environmental Science",
+      "author": "Daniel Botkin",
+      "category": "Environment",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 137,
+      "title": "Ecology",
+      "author": "E.P. Odum",
+      "category": "Environment",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 138,
+      "title": "Renewable Energy Sources",
+      "author": "Twidell & Weir",
+      "category": "Environment",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 139,
+      "title": "English Grammar in Use",
+      "author": "Raymond Murphy",
+      "category": "Language",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 140,
+      "title": "Objective General English",
+      "author": "S.P. Bakshi",
+      "category": "Language",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 141,
+      "title": "Word Power Made Easy",
+      "author": "Norman Lewis",
+      "category": "Language",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 142,
+      "title": "Wren & Martin English Grammar",
+      "author": "Wren & Martin",
+      "category": "Language",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 143,
+      "title": "Wings of Fire",
+      "author": "A.P.J. Abdul Kalam",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 144,
+      "title": "My Experiments with Truth",
+      "author": "Mahatma Gandhi",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 145,
+      "title": "The Diary of a Young Girl",
+      "author": "Anne Frank",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 146,
+      "title": "Long Walk to Freedom",
+      "author": "Nelson Mandela",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 147,
+      "title": "Steve Jobs",
+      "author": "Walter Isaacson",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 148,
+      "title": "Elon Musk",
+      "author": "Ashlee Vance",
+      "category": "Biography",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 149,
+      "title": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 150,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 151,
+      "title": "The Power of Habit",
+      "author": "Charles Duhigg",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 152,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 153,
+      "title": "How to Win Friends",
+      "author": "Dale Carnegie",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 154,
+      "title": "The 7 Habits of Highly Effective People",
+      "author": "Stephen R. Covey",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 155,
+      "title": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 156,
+      "title": "Zero to One",
+      "author": "Peter Thiel",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 157,
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 158,
+      "title": "Good to Great",
+      "author": "Jim Collins",
+      "category": "Self Help",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 159,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 160,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 161,
+      "title": "1984",
+      "author": "George Orwell",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 162,
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 163,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 164,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 165,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 166,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 167,
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 168,
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 169,
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 170,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 171,
+      "title": "Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 172,
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 173,
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 174,
+      "title": "Foundation",
+      "author": "Isaac Asimov",
+      "category": "Fiction",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 175,
+      "title": "A Brief History of Time",
+      "author": "Stephen Hawking",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 176,
+      "title": "The Selfish Gene",
+      "author": "Richard Dawkins",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 177,
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 178,
+      "title": "Homo Deus",
+      "author": "Yuval Noah Harari",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 179,
+      "title": "The Gene",
+      "author": "Siddhartha Mukherjee",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 180,
+      "title": "Cosmos",
+      "author": "Carl Sagan",
+      "category": "Science",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 181,
+      "title": "Indian Contract Act",
+      "author": "Avtar Singh",
+      "category": "Law",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 182,
+      "title": "Constitutional Law of India",
+      "author": "D.D. Basu",
+      "category": "Law",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 183,
+      "title": "Law of Torts",
+      "author": "R.K. Bangia",
+      "category": "Law",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 184,
+      "title": "Criminal Law",
+      "author": "K.D. Gaur",
+      "category": "Law",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 185,
+      "title": "Family Law",
+      "author": "Paras Diwan",
+      "category": "Law",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 186,
+      "title": "Anatomy & Physiology",
+      "author": "Elaine N. Marieb",
+      "category": "Medical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 187,
+      "title": "Gray's Anatomy",
+      "author": "Henry Gray",
+      "category": "Medical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 188,
+      "title": "Harrison's Principles of Medicine",
+      "author": "Kasper et al.",
+      "category": "Medical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 189,
+      "title": "Pharmacology",
+      "author": "K.D. Tripathi",
+      "category": "Medical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 190,
+      "title": "Pathology",
+      "author": "Robbins & Cotran",
+      "category": "Medical",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 191,
+      "title": "Civil Engineering Materials",
+      "author": "Shan Somayaji",
+      "category": "Civil",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 192,
+      "title": "Structural Analysis",
+      "author": "R.C. Hibbeler",
+      "category": "Civil",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 193,
+      "title": "Soil Mechanics & Foundation",
+      "author": "K.R. Arora",
+      "category": "Civil",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 194,
+      "title": "Surveying",
+      "author": "B.C. Punmia",
+      "category": "Civil",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 195,
+      "title": "Transportation Engineering",
+      "author": "Garber & Hoel",
+      "category": "Civil",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 196,
+      "title": "The Art of War",
+      "author": "Sun Tzu",
+      "category": "Philosophy",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 197,
+      "title": "Meditations",
+      "author": "Marcus Aurelius",
+      "category": "Philosophy",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 198,
+      "title": "The Republic",
+      "author": "Plato",
+      "category": "Philosophy",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 199,
+      "title": "Nicomachean Ethics",
+      "author": "Aristotle",
+      "category": "Philosophy",
+      "featured": false,
+      "available": true
+    },
+    {
+      "id": 200,
+      "title": "Thus Spoke Zarathustra",
+      "author": "Friedrich Nietzsche",
+      "category": "Philosophy",
+      "featured": false,
+      "available": true
+    }
+  ],
+  "issued": [
+    {
+      "issueId": 1775453840095,
+      "bookId": 2,
+      "title": "Operating Systems",
+      "author": "Abraham Silberschatz",
+      "category": "Computer Science",
+      "student": "aryan",
+      "issueDate": "06 Apr 2026",
+      "issuedAt": "2026-04-06T05:37:20.117Z"
+    }
+  ]
+}
