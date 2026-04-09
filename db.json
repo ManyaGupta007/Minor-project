@@ -14,7 +14,7 @@
       "author": "Abraham Silberschatz",
       "category": "Computer Science",
       "featured": true,
-      "available": false
+      "available": true
     },
     {
       "id": 3,
@@ -1601,16 +1601,5 @@
       "available": true
     }
   ],
-  "issued": [
-    {
-      "issueId": 1775453840095,
-      "bookId": 2,
-      "title": "Operating Systems",
-      "author": "Abraham Silberschatz",
-      "category": "Computer Science",
-      "student": "aryan",
-      "issueDate": "06 Apr 2026",
-      "issuedAt": "2026-04-06T05:37:20.117Z"
-    }
-  ]
+  "issued": []
 }
