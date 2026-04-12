@@ -168,6 +168,7 @@ async function loadFeatured() {
   }
 }
 
+
 // ── Search (text + optional category dropdown) ───────────────
 async function searchBooks() {
   const q   = document.getElementById('searchBox').value.trim();
