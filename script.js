@@ -135,6 +135,7 @@ async function loadCategories() {
   } catch {}
 }
 
+
 // ── Category counts in sidebar badges ───────────────────────
 async function loadCategoryBadges() {
   try {
@@ -153,8 +154,6 @@ async function loadCategoryBadges() {
   } catch {}
 }
 
-
-//
 // ── Featured (homepage default) ──────────────────────────────
 async function loadFeatured() {
   setLoading();
