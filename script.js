@@ -153,6 +153,8 @@ async function loadCategoryBadges() {
   } catch {}
 }
 
+
+//
 // ── Featured (homepage default) ──────────────────────────────
 async function loadFeatured() {
   setLoading();
@@ -167,7 +169,6 @@ async function loadFeatured() {
     setError('Cannot connect to server. Is it running on port 3000?');
   }
 }
-
 
 // ── Search (text + optional category dropdown) ───────────────
 async function searchBooks() {
