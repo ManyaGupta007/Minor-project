@@ -153,6 +153,7 @@ async function loadCategoryBadges() {
     });
   } catch {}
 }
+ 
 
 // ── Featured (homepage default) ──────────────────────────────
 async function loadFeatured() {

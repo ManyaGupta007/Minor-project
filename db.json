@@ -22,7 +22,7 @@
       "author": "Henry F. Korth",
       "category": "Computer Science",
       "featured": true,
-      "available": true
+      "available": false
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "author": "Andrew S. Tanenbaum",
       "category": "Computer Science",
       "featured": true,
-      "available": true
+      "available": false
     },
     {
       "id": 5,
@@ -1601,5 +1601,26 @@
       "available": true
     }
   ],
-  "issued": []
+  "issued": [
+    {
+      "issueId": 1776277095341,
+      "bookId": 4,
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "category": "Computer Science",
+      "student": "aryan",
+      "issueDate": "15 Apr 2026",
+      "issuedAt": "2026-04-15T18:18:15.341Z"
+    },
+    {
+      "issueId": 1776277096451,
+      "bookId": 3,
+      "title": "Database Management Systems",
+      "author": "Henry F. Korth",
+      "category": "Computer Science",
+      "student": "aryan",
+      "issueDate": "15 Apr 2026",
+      "issuedAt": "2026-04-15T18:18:16.452Z"
+    }
+  ]
 }
