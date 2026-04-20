@@ -11,7 +11,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
 
-
 // ── DB helpers ───────────────────────────────────────────────
 function readDB()       { return JSON.parse(fs.readFileSync(DB, 'utf8')); }
 function writeDB(data)  { fs.writeFileSync(DB, JSON.stringify(data, null, 2)); }
