@@ -2,6 +2,7 @@ const API = 'http://localhost:3000/api';
 let allIssued = [];
 
 // ── Sidebar ──────────────────────────────────────────────────
+
 function toggleSidebar() {
   const sb    = document.getElementById('sidebar');
   const shell = document.getElementById('appShell');
