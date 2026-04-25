@@ -11,6 +11,7 @@ function toggleSidebar() {
   localStorage.setItem('sl_sidebar', col ? '1' : '0');
 }
 
+
 function openSidebar() {
   document.getElementById('sidebar').classList.add('mobile-open');
   document.getElementById('overlay').classList.add('show');
