@@ -200,6 +200,7 @@ async function searchBooks() {
   }, 300);
 }
 
+
 function clearSearch() {
   document.getElementById('searchBox').value      = '';
   document.getElementById('categoryFilter').value = '';
