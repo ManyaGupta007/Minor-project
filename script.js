@@ -208,6 +208,7 @@ function clearSearch() {
   loadFeatured();
 }
 
+
 // ── Render books ─────────────────────────────────────────────
 function renderBooks(list) {
   const tbody = document.getElementById('bookList');
